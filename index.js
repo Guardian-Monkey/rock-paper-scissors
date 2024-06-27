@@ -20,3 +20,35 @@ function getHumanChoice() {
     return input;
 }
 
+// Create a function that plays a round of rock paper scissors
+// The function prints the winner to the console, and increments the score of the winner by 1
+function playRound() {
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    if (computerChoice == humanChoice)
+        console.log("Draw!");
+    else if (humanChoice == 'rock' && computerChoice == 'paper') {
+        console.log("Computer Wins!");
+        computerScore++;
+    }
+    else if (humanChoice == 'rock' && computerChoice == 'scissors') {
+        console.log("You Win!");
+        humanScore++;
+    }
+    else if (humanChoice == 'paper' && computerChoice == 'rock') {
+        console.log("You Win!");
+        humanScore++;
+    }
+    else if (humanChoice == 'paper' && computerChoice == 'scissors') {
+        console.log("Computer Wins!");
+        computerScore++;
+    }
+    else if (humanChoice == 'scissors' && computerChoice == 'rock') {
+        console.log("Computer Wins!");
+        computerScore++;
+    }
+    else if (humanChoice == 'scissors' && computerChoice == 'paper') {
+        console.log("You Win!");
+        humanScore++;
+    }
+}
