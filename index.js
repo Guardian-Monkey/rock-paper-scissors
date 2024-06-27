@@ -6,3 +6,12 @@ function getComputerChoice() {
     else if (num == 2) return "paper";
     else return "scissors";
 }
+
+// Take correct input from the user
+function getHumanChoice() {
+    let input;
+    do {
+        input = prompt("Type rock, paper, or scissors: ").toLowerCase();
+    } while (input != 'rock' && input != 'paper' && input != 'scissors');
+    return input;
+}
