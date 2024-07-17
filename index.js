@@ -66,7 +66,11 @@ function playGame() {
         if (humanScore == 5 || computerScore == 5) {
             // Display the winner of the game within the result div
             result.textContent = humanScore == 5 ? "Congrats! You've won the game!" : "Aw shucks, the computer won the game! You lose!";
-
+            // Reset the game
+            humanScore = 0;
+            humanSpan.textContent = 0;
+            computerScore = 0;
+            computerSpan.textContent = 0;
         }
     }
 
