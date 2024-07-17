@@ -7,15 +7,6 @@ function getComputerChoice() {
     else return "scissors";
 }
 
-// Take correct input from the user
-function getHumanChoice() {
-    let input;
-    do {
-        input = prompt("Type rock, paper, or scissors: ").toLowerCase();
-    } while (input != 'rock' && input != 'paper' && input != 'scissors');
-    return input;
-}
-
 function playGame() {
     // Variables track the score of the user, and the computer
     let humanScore = 0;
