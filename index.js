@@ -19,7 +19,7 @@ function playGame() {
     const computerSpan = document.querySelector("#computerScore");
 
     // Create a function that plays a round of rock paper scissors
-    // The function prints the winner to the console, and increments the score of the winner by 1
+    // The function displays the winner within the result div, and increments the score of the winner by 1
     const playRound = (humanChoice) => {
         let computerChoice = getComputerChoice();
         if (computerChoice == humanChoice)
