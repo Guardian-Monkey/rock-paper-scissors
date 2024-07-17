@@ -23,9 +23,8 @@ function playGame() {
 
     // Create a function that plays a round of rock paper scissors
     // The function prints the winner to the console, and increments the score of the winner by 1
-    const playRound = () => {
+    const playRound = (humanChoice) => {
         let computerChoice = getComputerChoice();
-        let humanChoice = getHumanChoice();
         if (computerChoice == humanChoice)
             console.log("Draw!");
         else if (humanChoice == 'rock' && computerChoice == 'paper') {
@@ -54,6 +53,16 @@ function playGame() {
         }
     }
 
+    // Add event listener to each button
+    const choices = document.querySelectorAll("button");
+    choices.forEach((choice) => {
+        choice.addEventListener('click', () => {
+            // call playRound() with the correct player selection
+            let choiceStr = choice.getAttribute('id');
+            playRound(choiceStr);
+        });
+    });
+
     // print the winner of the game to the console
     if (humanScore > computerScore)
         console.log("You have beaten the computer! Good job!");
@@ -61,3 +70,5 @@ function playGame() {
         console.log("You lose! Please try again next time!");
     }
 }
+
+playGame();
