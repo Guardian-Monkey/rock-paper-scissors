@@ -54,13 +54,6 @@ function playGame() {
         }
     }
 
-    // play 5 rounds of rock paper scissors
-    for (let i = 1; i <= 5; i++) {
-        playRound();
-        // if round 3 and one player has 3 as their score, they win, so break
-        if (i == 3 && (computerScore == 3 || humanScore == 3))
-            break;
-    }
     // print the winner of the game to the console
     if (humanScore > computerScore)
         console.log("You have beaten the computer! Good job!");
