@@ -21,34 +21,37 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    // Select the result div for displaying the result of playRound()
+    const result = document.querySelector("#result");
+
     // Create a function that plays a round of rock paper scissors
     // The function prints the winner to the console, and increments the score of the winner by 1
     const playRound = (humanChoice) => {
         let computerChoice = getComputerChoice();
         if (computerChoice == humanChoice)
-            console.log("Draw!");
+            result.textContent = "Draw!";
         else if (humanChoice == 'rock' && computerChoice == 'paper') {
-            console.log("Computer Wins!");
+            result.textContent = "Computer Wins!";
             computerScore++;
         }
         else if (humanChoice == 'rock' && computerChoice == 'scissors') {
-            console.log("You Win!");
+            result.textContent = "You Win!";
             humanScore++;
         }
         else if (humanChoice == 'paper' && computerChoice == 'rock') {
-            console.log("You Win!");
+            result.textContent = "You Win!";
             humanScore++;
         }
         else if (humanChoice == 'paper' && computerChoice == 'scissors') {
-            console.log("Computer Wins!");
+            result.textContent = "Computer Wins!";
             computerScore++;
         }
         else if (humanChoice == 'scissors' && computerChoice == 'rock') {
-            console.log("Computer Wins!");
+            result.textContent = "Computer Wins!";
             computerScore++;
         }
         else if (humanChoice == 'scissors' && computerChoice == 'paper') {
-            console.log("You Win!");
+            result.textContent = "You Win!";
             humanScore++;
         }
     }
