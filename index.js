@@ -61,6 +61,13 @@ function playGame() {
         // Display the new scores of the player and the computer after every round
         computerSpan.textContent = computerScore;
         humanSpan.textContent = humanScore;
+
+        // print the winner of the game to the console
+        if (humanScore == 5 || computerScore == 5) {
+            // Display the winner of the game within the result div
+            result.textContent = humanScore == 5 ? "Congrats! You've won the game!" : "Aw shucks, the computer won the game! You lose!";
+
+        }
     }
 
     // Add event listener to each button
@@ -73,12 +80,6 @@ function playGame() {
         });
     });
 
-    // print the winner of the game to the console
-    if (humanScore > computerScore)
-        console.log("You have beaten the computer! Good job!");
-    else {
-        console.log("You lose! Please try again next time!");
-    }
 }
 
 playGame();
