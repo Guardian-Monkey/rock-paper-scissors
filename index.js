@@ -25,7 +25,7 @@ function playGame() {
     const result = document.querySelector("#result");
     // Select the score spans to modify the scores of the players as each round finishes
     const humanSpan = document.querySelector("#humanScore");
-    const computerSpan = document.querySelector("computerScore");
+    const computerSpan = document.querySelector("#computerScore");
 
     // Create a function that plays a round of rock paper scissors
     // The function prints the winner to the console, and increments the score of the winner by 1
@@ -57,6 +57,10 @@ function playGame() {
             result.textContent = "You Win!";
             humanScore++;
         }
+
+        // Display the new scores of the player and the computer after every round
+        computerSpan.textContent = computerScore;
+        humanSpan.textContent = humanScore;
     }
 
     // Add event listener to each button
